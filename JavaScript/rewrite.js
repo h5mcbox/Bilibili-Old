@@ -1357,7 +1357,7 @@
                         task();
                     }
                     trial(() => {
-                        if (window.player != undefined && player.getPlaylist && player.getPlaylist() != null) {
+                        if (window.player != undefined && player.getPlaylist && player.getPlaylist() != null && document.querySelector("video")) {
                             let playList = player.getPlaylist();
                             let partIndex = getPlaylistIndex();
                             navigator.mediaSession.metadata = new MediaMetadata({
